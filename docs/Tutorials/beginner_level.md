@@ -11,7 +11,7 @@
 > 此外，还需要下载依赖包：rmoss_core
 >
 > ```bash
-> git clone https://gitlab.com/robomaster-os/rmos_public/rmos_contrib.git
+> git clone https://github.com/robomaster-oss/rmoss_core.git
 > ```
 > 编译：进入dev_ws目录下
 > 
