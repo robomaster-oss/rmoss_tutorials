@@ -1,5 +1,3 @@
-## RoboMasterOS的特点
-
 ### 1.ROS兼容
 
 RoboMasterOSS 是基于ROS2的，提供了很多__ROS2 metaPackage (Stack)__项目，针对robomaster比赛，集成了一些开发的基本工具，并提供了一些开发功能包，以及开发样例，以达到加速开发的目的。
