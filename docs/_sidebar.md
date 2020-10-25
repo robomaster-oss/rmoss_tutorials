@@ -24,7 +24,7 @@
   - [FAQs](Resource/faq.md)
   
 - [**Contribution**](contribution.md)
-- [**About us**](about_us.md)
+- [**About Us**](about_us.md)
 
 
 

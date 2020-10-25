@@ -44,8 +44,6 @@ launch文件说明：
 
 * 略
 
-
-
 >  更多内容参考github: [rm_cam][1]
 
 

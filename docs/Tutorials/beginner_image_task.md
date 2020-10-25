@@ -53,10 +53,7 @@ ros2 launch rm_task task_show_image.launch.py
 
 ### 自定义图像处理任务开发
 
-在显示图像任务中，主要代码在TaskShowImage类中，通过继承TaskImageRelatedBase基类，并实现相关接口，实现功能，在进行自定义开发时，最简单的实现只需要完成两步即可：
-
-* 仿照TaskShowImage类，继承TaskImageRelatedBase，实现taskImageProcess接口。
-* 仿照nodes/task_show_image_node.cpp完成main函数入口，启动节点。
+* 略
 
 具体实现：
 

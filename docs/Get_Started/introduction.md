@@ -7,9 +7,8 @@
 **RoboMaster OSS（RoboMaster Open Software Stack，简称，RMOSS）**是为RoboMaster高性能计算平台软件开发提供快速开发工具的一个通用统一的`开源软件栈`。
 
 * 提供RoboMaster相关的ROS2 metapackage/package：
-  * rmoss_core提供了部分功能模块，如相机模块，弹道计算模块等，
-  * rmoss_contrib提供了自瞄模块等。
-* 提供了模块的设计架构，模块的组织方式，以及代码编程规范，是一个统一的软件架构。
+  * rmoss_core 提供了部分基础功能模块，如相机模块，弹道计算模块等，
+  * rmoss_contrib 提供了自瞄模块等。
 
 > 关于RoboMasterOSS更多项目，见[Project](Get_Started/project)章节
 
@@ -51,12 +50,12 @@ RoboMasterOSS提供了许多开发模块，以及开发工具，为搭载高性�
 RoboMasterOSS 只有一个目的，**加速开发**。
 
 * 降低协作成本：统一架构
-  * RMOSS 提供了一个统一的架构，以及开发规范，避免了多人协作带来的移植难度。
+  * RoboMasterOSS 提供了一个统一的架构，以及开发规范，避免了多人协作带来的移植难度。
 * 降低开发成本：复用模块
-  * rmoss_core 具备丰富的**基础模块** 。ROS2本身具有丰富的基础模块和强大的调试模块。
+  * ROS2本身具有丰富的基础模块和调试模块，RoboMasterOSS提供多个ROS2 meta package/package进行二次开发。
   * 兼容ROS2，所以可以充分利用其他基于ROS2的项目加速开发，如SLAM相关功能包。
 * 快速上手，适合新手：丰富的文档
-  * RMOS具备详细的文档支持，包含RoboMaster机器人开发流程样例，以及一些开发技巧，加速开发，对于新手来说，非常适合。
+  * RoboMasterOSS不仅提供源码，提供技术文档，包含相关功能包的使用文档，以及一些开发技巧等，对于新手来说，可以快速上手。
 
 ### 设计参考
 
