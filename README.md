@@ -13,6 +13,8 @@ RoboMasterOSS是一个面向RoboMaster的开源软件栈项目，目的是为Rob
 
 > 访问地址: [https://robomaster-oss.github.io/rmoss_tutorials/](https://robomaster-oss.github.io/rmoss_tutorials/)
 
+**由于rmoss_core,rmos_contrib还在开发中，该项目不稳定，以各个项目的最新README为准**
+
 ## 1.本地环境测试
 
 ```bash
