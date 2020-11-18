@@ -10,25 +10,24 @@ rmoss模块设计主要遵循以下两个原则
   * ROS层：顶层设计，调用算法层，以及通过ROS通信机制，与其它模块建立连接，实现功能。
 * 动态库
   * rmoss模块都会编译成动态库，即模块可以作为独立节点运行，也可以作为库被依赖。
+  * 具有main函数的源文件在nodes目录下，依赖动态库，单独编译成可执行文件。
 
 > 动态库生成可参考其他RMOSS项目的CMakefile.txt.
 
-### 2..二次开发例子
+### 2. 二次开发例子
 
-基于rm_base的standard_robot_base模块
+#### 2.1 接口型
 
-* 复用rm_base中的serialport_dev数据传输类和fixed_packet数据封装类，大大降低了工作量。
+rm_cam模块
 
-task_image_related模块
+* 定义相机设备接口cam_dev_interface，实现了虚拟相机与usb相机的通用ROS节点实现，支持自定义设备实现。
 
-* 继承task_image_related中的基类，无需关心ROS接收图像层面，只需要实现`taskImageProcess`函数即可实现图像处理任务。
-* 被task_auto_aim和task_power_rune2019应用。
+#### 2.2 工具型（乐高式）
 
-rm_tool模块
+rm_common模块
 
-* 提供了一些基本类，被其它模块广泛应用，如单目测量封装函数（PnP）等等
-* 被task_auto_aim和task_power_rune2019等模块应用。
+* 提供mono_measure_tool工具，具有单目测量（PnP）等功能，被rm_auto_aim和rm_power_rune2019应用。
 
 rm_projectile_motion模块
 
-* 提供了重力补偿工具类，被task_auto_aim和task_power_rune2019应用。
+* 提供了重力补偿工具类，被rm_auto_aim和rm_power_rune2019应用。

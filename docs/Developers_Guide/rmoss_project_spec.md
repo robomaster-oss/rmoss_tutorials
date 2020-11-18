@@ -5,9 +5,9 @@
 * 工程项目目录结构完全与ROS2项目一致。
 * ROS2 package具有CMake package和Python package两种，这里只详细介绍CMake package。
 
-## 1.CMake package
+### 1.CMake package
 
-### 1.1 项目文件结构（File Structure）
+#### 1.1 项目文件结构（File Structure）
 
 以rm_exmaple项目为例
 
@@ -25,7 +25,7 @@ rm_exmaple
 └── README.md
 ```
 
-### 1.2 CMakeLists使用例子
+#### 1.2 CMakeLists使用例子
 
 以下为rm_base的CMakeLists.txt的文件例子
 
@@ -99,9 +99,9 @@ endif()
 ament_package()
 ```
 
-### 1.3 CMakeLists 使用说明
+#### 1.3 CMakeLists 使用说明
 
-#### ament_package
+##### ament_package
 
 ```bash
 ament_package()
@@ -112,7 +112,7 @@ ament_package()
 
 > Tip：ament_package()放在CMakeLists.txt最后即可
 
-#### Compiler Options
+##### Compiler Options
 
 ```makefile
 if(NOT CMAKE_C_STANDARD)
@@ -124,7 +124,7 @@ endif()
 target_compile_options(my_target PRIVATE -Wall)
 ```
 
-#### Include
+##### Include
 
 ```makefile
 #methods1:为整个package添加include目录
@@ -136,7 +136,7 @@ target_include_directories(my_target
     $<INSTALL_INTERFACE:include>)
 ```
 
-#### Dependency
+##### Dependency
 
 ```makefile
 #methods1:将会包含必要的头文件以及依赖库（推荐方法）
@@ -147,7 +147,7 @@ find_package(Eigen3 REQUIRED)
 target_link_libraries(my_target Eigen3::Eigen)
 ```
 
-#### Install
+##### Install
 
 ```bash
 # 安装include目录
@@ -174,7 +174,7 @@ install(PROGRAMS scripts/my_executable DESTINATION lib/${PROJECT_NAME})
 #!/usr/bin/python3    #针对于python3脚本
 ```
 
-####  构建Library
+#####  构建Library
 
 ```makefile
 #library
@@ -205,7 +205,7 @@ ament_export_include_directories(include)
 ament_export_libraries(my_library)
 ```
 
-#### environment hook
+##### environment hook
 
 ```makefile
 ament_environment_hooks("${CMAKE_CURRENT_SOURCE_DIR}/env-hooks/${PROJECT_NAME}.sh.in")
@@ -214,10 +214,10 @@ ament_environment_hooks("${CMAKE_CURRENT_SOURCE_DIR}/env-hooks/${PROJECT_NAME}.d
 
 - 待续
 
-## 2.Python Package
+### 2.Python Package
 
 * 略
 
-## 3.README规范
+### 3.README规范
 
 * 略
