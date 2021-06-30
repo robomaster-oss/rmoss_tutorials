@@ -89,34 +89,34 @@
 ​    目前，已经存在许多先进的弹道模型，但是模型过于复杂，不易理解，而且涉及微分方程数值求解，比较耗时，所以，引入空气阻力模型，但本着简化模型的原则，对其进行简化。
 
 *  由于在比赛中，子弹飞行不会过于斜抛（吊射基地除外），所以子弹飞行过程中，受到的阻力更多来源与水平方向（x方向）。
-*  __假设空气阻力与速度平方成正比__
+*  **假设空气阻力与速度平方成正比**
 
 $$
-\begin{align}\text{空气阻力模型 :  }&f=k_0v^2 \\
+\begin{aligned}\text{空气阻力模型 :  }&f=k_0v^2 \\
 \text{ x方向:  }&f_x=f\cdot cos\theta=k_0v^2 \cdot cos\theta\\
 \text{ y方向:  }&f_y=f\cdot sin\theta=k_0v^2\cdot sin\theta\\ 
-\end{align}
+\end{aligned}
 $$
 
 * cos(10°) =0.984 , sin(10°) =0.173
 * 即10度以内，x方向承担较大的阻力分量,故考虑忽略y方向的阻力，当角度较小时，做如下假设：
 
 $$
-\begin{align}假设\theta 较小 :&cos\theta\approx1 \\
+\begin{aligned}
+假设\theta 较小 :&cos\theta\approx1 \\
 \text{ x方向:  }&f_x=f\cdot cos\theta=k_0v^2 \cdot cos\theta = k_0v^2 \cdot cos^2\theta=k_ov^2_x \\
-
-\end{align}
+\end{aligned}
 $$
 
 
 
 基于以上分析，**对子弹飞行做运动分解，只考虑水平方向的空气阻力**，不考虑垂直方向的空气阻力。
 
-__x方向运动模型推导：__
+**x方向运动模型推导：**
 
 
 $$
-\begin{align}
+\begin{aligned}
 \text{空气阻力模型 :  }&f_x=k_0v_x^2 \\
 \text{ 牛顿定律:  }&-f_x/m=a=\frac{dv_x}{dt} \\
  &  \Longrightarrow  -\frac{k_0}{m}v_x^2 =\frac{dv_x}{dt} \Rightarrow k_1dt=-\frac{dv_x}{v_x^2} \dots\dots(k_1=\frac{k_0}{m}) \\
@@ -125,10 +125,8 @@ $$
 
 即得到水平方向速度模型& v_x=\frac{v_{x0}}{k_1v_{x0}t+1} \\
 即得到水平方向位移模型& x=\int^t_0v_xdt=\frac{1}{k_1}\ln(k_1v_{x0}t+1)
-  \end{align}
+  \end{aligned}
 $$
-
-
 
 不难发现，当**阻力系数k1趋近于0**时，该模型**退化**为**理想抛物线模型**
 
@@ -190,7 +188,7 @@ $$
 * 采用线性近似解
 
 $$
-\begin{align}
+\begin{aligned}
 &
 \begin{cases}
 x=\frac{1}{k}\ln(kv_{x0}t+1)& \dots(1)\\
@@ -208,7 +206,7 @@ t=\frac{v_{y0}+\sqrt{v_{y0}^2-2gy}}{g}  &\cdots(3)
 &
 (4)\Longrightarrow
 k\approx \frac{2( v_{x0}t-x)}{x^2} &\cdots(5)\\
-  \end{align}
+  \end{aligned}
 $$
 
 即，把（1）带入（5）即可得到k的近似解。
@@ -224,36 +222,36 @@ $$
 
 ### a. 模型假设：
 
-有了单方向模型推导的经验，我们依然__假设空气阻力与速度平方成正比__ 。
+有了单方向模型推导的经验，我们依然**假设空气阻力与速度平方成正比** 。
 $$
-\begin{align}
+\begin{aligned}
 \text{空气阻力模型 :  }&f=k_0v^2 \\
 \text{ x方向:  }&f_x=f\cdot cos\theta=k_0v^2 \cdot cos\theta\\
 \text{ y方向:  }&f_y=f\cdot sin\theta=k_0v^2\cdot sin\theta\\
-  \end{align}
+  \end{aligned}
 $$
 显然，fx与fy与子弹飞行的姿态有关，x,y方向运动并不能完全分解，为了简化计算过程，故做以下假设
 
-__空气阻力假设:__
+**空气阻力假设:**
 $$
-\begin{align}
+\begin{aligned}
 \text{ x方向:  }&\hat{f_x}=f_x\cdot cos\theta= k_0v^2\cdot cos^2\theta =k_0v^2_x<f_x\\
 \text{ y方向:  }&\hat{f_y}=f_y\cdot sin\theta= k_0v^2\cdot sin^2\theta =k_0v^2_y<f_y\\
-  \end{align}
+  \end{aligned}
 $$
 
 有了以上假设，就可以进行运动分解，两个方向单独计算，x方向还是和单方向空气阻力推导过程一样，只需要完成对y方向的模型推导即可。
 
 ### b. y方向运动模型推导：
 
-对于y方向的阻力，如果弹道轨迹上升到抛物线最高点，空气阻力方向会发生改变，故这里为简化计算，__假设y方向上升过程，存在空气阻力，下降过程无空气阻力。__ 基于以下因素：
+对于y方向的阻力，如果弹道轨迹上升到抛物线最高点，空气阻力方向会发生改变，故这里为简化计算，**假设y方向上升过程，存在空气阻力，下降过程无空气阻力。** 基于以下因素：
 
 - 上升段，y方向空气阻力阻碍物体上升，表现为负补偿，需要加大补偿力度，下降段，阻碍物体下降，为正补偿作用。这里的正补偿作用可以补偿之前忽悠掉的其他因素。
 - 且下降过程速度相对较小，优先射击点在上升段，以及下降过程较短等因素
 
-__(1)上升过程：__
+**(1)上升过程：**
 $$
-\begin{align}
+\begin{aligned}
 \text{空气阻力模型 :  }&f_y=k_0v_y^2 \\
 \text{ 牛顿定律:  }&-f_y-mg=ma=m\frac{dv_y}{dt} \\
  &  \Longrightarrow  -\frac{k_0}{m}v_y^2-g =\frac{dv_y}{dt} \Rightarrow -dt=\frac{dv_x}{k_1v_x^2+g} \dots\dots(k_1=\frac{k_0}{m}) \\
@@ -263,40 +261,40 @@ $$
 即得到竖直方向速度模型& v_y=\sqrt{\frac{g}{k_1}}tan\left(\sqrt{k_1g}({C-t)}\right) \cdots\cdots(t<C)\\
 即得到竖直方向位移模型& y=\int^t_0v_ydt=\frac{1}{k_1} \int^{\sqrt{k_1g}C}_{\sqrt{k_1g}(C-t)}tan(z)dz=\frac{1}{k_1}\cdot \ln{\frac{cos(\sqrt{k_1g}(C-t))}{cos(\sqrt{k_1g}C)}} \cdots(0<t<C)\\
 特别，到达最高点有&y_{max}=\frac{1}{k_1} \cdot\ln{\frac{1}{cos(\sqrt{k_1g}C)}}=\frac{1}{2k_1}\ln(1+\frac{k_1}{g}v^2_{y0})\cdots(t=C)
-  \end{align}
+  \end{aligned}
 $$
-__(2)下降过程：__
+**(2)下降过程：**
 $$
 y=-\frac{1}{2}gt^2
 $$
-__(3)空气阻力补偿:__
+**(3)空气阻力补偿:**
 
 在子弹飞行上升过程中，由于速度角度（速度与水平夹角）是逐渐减少的，趋近于0。
 $$
-\begin{align}
+\begin{aligned}
 速度夹角：&\theta\rightarrow0,则sin\theta\rightarrow0,cos\theta\rightarrow1 \\
 \text{ x方向:  }&\hat{f_x}=f_x\cdot cos\theta \rightarrow f_x\\
 \text{ y方向:  }&\hat{f_y}=f_y\cdot sin\theta  \rightarrow 0\\
 &而且，\theta一般不会太大，大部分情况有：0<\theta<\frac{\pi}{4};
-  \end{align}
+  \end{aligned}
 $$
 
 
 所以，x方向无需补偿，y方向需要进行空气阻力补偿，以减小模型误差，这里补偿
 $$
-\begin{align}
+\begin{aligned}
 &\text{ y方向:  }\hat{f_y}=f_y\cdot sin\theta\cdot\frac{1}{sin\alpha} \\
 &其中\alpha为射击初始角度\theta_0,这里把系数\frac{1}{sin\alpha}与k和并得：\\
 &\hat{k_1}=k_1*\frac{1}{sin\alpha} (\alpha>0)
-\end{align}
+\end{aligned}
 $$
 即，对y方向，进行空气阻力系数补偿。
 
-__k1求解方式：__
+**k1求解方式：**
 
-* __数值求解__：利用一次测试数据，求解参数k1。参考单方向空气阻力模型k迭代求解法。
-* __经验求解__：不断调整k1，取得相对合适的值。
-* __理论求解__：k1=k0/m；利用物理理论求解空气阻力系数k0（f=k0*v^2），即可得到k1.
+* **数值求解**：利用一次测试数据，求解参数k1。参考单方向空气阻力模型k迭代求解法。
+* **经验求解**：不断调整k1，取得相对合适的值。
+* **理论求解**：k1=k0/m；利用物理理论求解空气阻力系数k0（f=k0*v^2），即可得到k1.
 
 ### c. 最终混合模型
 
