@@ -1,14 +1,15 @@
 # Roadmap
 
-该页面包含RoboMasterOSS的未来工作计划，按照季度划分。目前rmoss项目还在开发中，大部分功能还在构建中，并且不稳定，仍可能进行代码重构，打破API/ABI，不推荐直接用于竞赛中。
+该页面包含RoboMasterOSS的未来工作计划，按照季度划分。目前rmoss项目还在开发中，仍可能进行代码重构，打破API/ABI，不推荐直接用于竞赛中。
 
 ### 2021 Q3 (7-9月) - 进行中
 
 rmoss_core项目
 
-- [ ] 遵循ROS2代码风格（参考ros2代码风格说明）
-- [ ] rm_common和rm_task合并成rm_util （该模块需要进行重构）。
-- [ ] rmoss_core模块文档完善，部分文档需移动至rmoss_tutorials中
+- [x] 遵循ROS2代码风格（已重构所有API）。
+- [x] 代码通过ament_lint自动测试。
+- [x] rm_common和rm_task合并成rm_util （已重构）。
+- [ ] rmoss_core模块文档完善(部分文档需移动至rmoss_tutorials中)
 - [ ] 持续集成CI。
 
 demo
