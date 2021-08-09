@@ -1,9 +1,6 @@
 # RMOSS项目规范(暂定)
 
-基于RMOSS开发项目，本质上构建一个ROS2 package，所以项目工程结构以ROS2项目工程为基础。
-
-* 工程项目目录结构完全与ROS2项目一致。
-* ROS2 package具有CMake package和Python package两种，这里只详细介绍CMake package。
+基于RMOSS开发项目，项目工程结构以ROS2项目工程为基础，本质上构建一个ROS2 package。
 
 ### 1.代码风格规范
 
@@ -28,15 +25,19 @@ rm_exmaple
 │   └── rm_exmaple # 主要代码include目录
 ├── src            # 主要代码src目录
 ├── nodes          # ros node目录，程序main函数入口
+├── rm_exmaple     # 若该包作为python项目时，python文件存放目录
 ├── launch         # launch启动文件目录
 ├── scripts        # python，bash等脚本存放目录
 ├── config         # 配置目录，如ROS参数yaml文件
 ├── resource       # 资源目录，如图片，模型等文件
+├── test           # 测试目录，存放测试代码
 ├── doc            # 文档目录
 ├── CMakeLists.txt
 ├── package.xml
 └── README.md
 ```
+
+* 参考了[ROS2 package layout](https://docs.ros.org/en/foxy/Contributing/Developer-Guide.html#package-layout)，多了nodes和scripts两个目录。
 
 ### 3.文件头注释模板
 
