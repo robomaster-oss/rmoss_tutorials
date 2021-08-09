@@ -61,6 +61,7 @@ RoboMasterOSS 只有一个目的，**加速开发**。
 
 * 基于ROS的设计方式
 * 参考了[RoboRTS][4]的设计方式
+* 参考了[Navigation2][5]的设计方式
 
 > RoboRTS项目
 >
@@ -72,3 +73,4 @@ RoboMasterOSS 只有一个目的，**加速开发**。
 
 [2]: https://www.robomaster.com
 [4]: https://github.com/RoboMaster/RoboRTS
+[5]: https://github.com/ros-planning/navigation2

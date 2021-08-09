@@ -6,11 +6,13 @@
 
 rmoss_core项目
 
-- [x] 遵循ROS2代码风格（已重构所有API）。
-- [x] 代码通过ament_lint自动测试。
-- [x] rm_common和rm_task合并成rm_util （已重构）。
-- [ ] rmoss_core模块文档完善(部分文档需移动至rmoss_tutorials中)
-- [ ] 持续集成CI。
+- [x] 遵循ROS2代码风格（已重构所有API）
+- [x] 代码通过ament_lint自动测试
+- [x] rm_common和rm_task合并成rm_util （已重构）
+- [x] rmoss_core模块文档整理
+- [x] 增加持续集成CI
+- [ ] 增加单元测试
+- [ ] 规范化代码注释
 
 demo
 
@@ -20,9 +22,9 @@ demo
 
 rmoss_ign项目
 
-* 完善模块相关文档。
+* 完善模块相关文档
 
-* 完善rmua19_ignition_simulator功能，主要为裁判系统的开发。
+* 完善rmua19_ignition_simulator功能，主要为裁判系统的开发
 
 demo
 
