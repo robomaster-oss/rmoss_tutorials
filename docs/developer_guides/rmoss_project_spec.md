@@ -24,7 +24,6 @@ rm_exmaple
 ├── include
 │   └── rm_exmaple # 主要代码include目录
 ├── src            # 主要代码src目录
-├── nodes          # ros node目录，程序main函数入口
 ├── rm_exmaple     # 若该包作为python项目时，python文件存放目录
 ├── launch         # launch启动文件目录
 ├── scripts        # python，bash等脚本存放目录
@@ -37,7 +36,7 @@ rm_exmaple
 └── README.md
 ```
 
-* 参考了[ROS2 package layout](https://docs.ros.org/en/foxy/Contributing/Developer-Guide.html#package-layout)，多了nodes和scripts两个目录。
+* 参考了[ROS2 package layout](https://docs.ros.org/en/foxy/Contributing/Developer-Guide.html#package-layout)
 
 ### 3.文件头注释模板
 
