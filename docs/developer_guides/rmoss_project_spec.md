@@ -21,20 +21,20 @@ c++其他约定
 
 ### 2.项目文件结构（File Structure）
 
-以rm_exmaple项目为例
+以rmoss_exmaple项目为例
 
 ```python
-rm_exmaple
+rmoss_exmaple
 ├── include
-│   └── rm_exmaple # 主要代码include目录
-├── src            # 主要代码src目录
-├── rm_exmaple     # 若该包作为python项目时，python文件存放目录
-├── launch         # launch启动文件目录
-├── scripts        # python，bash等脚本存放目录
-├── config         # 配置目录，如ROS参数yaml文件
-├── resource       # 资源目录，如图片，模型等文件
-├── test           # 测试目录，存放测试代码
-├── doc            # 文档目录
+│   └── rmoss_exmaple # 主要代码include目录
+├── src               # 主要代码src目录
+├── rmoss_exmaple     # 若该包作为python项目时，python文件存放目录
+├── launch            # launch启动文件目录
+├── scripts           # python，bash等脚本存放目录
+├── config            # 配置目录，如ROS参数yaml文件
+├── resource          # 资源目录，如图片，模型等文件
+├── test              # 测试目录，存放测试代码
+├── doc               # 文档目录
 ├── CMakeLists.txt
 ├── package.xml
 └── README.md
@@ -68,7 +68,7 @@ c++
 
 运行测试
 ```bash
-colcon test --package-select rm_base
+colcon test --package-select rmoss_base
 ```
 * 一般包括两种测试：代码风格检查和代码单元测试（test目录中的测试代码）
 

@@ -2,11 +2,11 @@
 
 #### CMakeLists使用例子
 
-以下为rm_base的CMakeLists.txt的文件例子
+以下为rmoss_base的CMakeLists.txt的文件例子
 
 ```bash
 cmake_minimum_required(VERSION 3.5)
-project(rm_base)
+project(rmoss_base)
 
 # Default to C++14
 if(NOT CMAKE_CXX_STANDARD)
@@ -19,18 +19,18 @@ endif()
 #find package
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
-find_package(rm_interfaces REQUIRED)
+find_package(rmoss_interfaces REQUIRED)
 find_package(geometry_msgs REQUIRED)
 
 #include
 include_directories(include)
 
-#create rm_base lib
+#create rmoss_base lib
 AUX_SOURCE_DIRECTORY(${PROJECT_SOURCE_DIR}/src DIR_SRCS)
 add_library(${PROJECT_NAME} ${DIR_SRCS})
 ament_target_dependencies(${PROJECT_NAME}
     rclcpp 
-    rm_interfaces
+    rmoss_interfaces
     geometry_msgs
 )
 #create robot_base_example node
@@ -59,10 +59,10 @@ install(PROGRAMS
         scripts/gimbal_control_test.py 
     DESTINATION lib/${PROJECT_NAME})
 
-#export rm_base lib
+#export rmoss_base lib
 ament_export_targets(${PROJECT_NAME} HAS_LIBRARY_TARGET)
 ament_export_dependencies(rclcpp)
-ament_export_dependencies(rm_interfaces)
+ament_export_dependencies(rmoss_interfaces)
 ament_export_dependencies(geometry_msgs)
 
 #test

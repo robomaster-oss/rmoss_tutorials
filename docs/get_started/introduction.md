@@ -6,30 +6,30 @@
 
 **RoboMaster OSS（RoboMaster Open Software Stack，简称，RMOSS）**是为RoboMaster高性能计算平台软件开发提供快速开发工具的一个通用统一的`开源软件栈`。
 
-* 提供RoboMaster相关的ROS2 metapackage/package：
-  * rmoss_core 提供了部分基础功能模块，如相机模块，弹道计算模块等，
-  * rmoss_contrib 提供了自瞄模块等。
+提供RoboMaster相关的ROS2 metapackage/package：
 
-> 关于RoboMasterOSS更多项目，见[Project](Get_Started/project)章节
+* [rmoss_core项目](https://github.com/robomaster-oss/rmoss_core) ：基础功能软件栈，提供基础功能包，如相机模块，弹道计算模块等。
+* [rmoss_contrib项目](https://github.com/robomaster-oss/rmoss_contrib) ：任务功能软件栈，提供任务级的功能包，如自瞄模块，能量机关模块等
+* [rmoss_ign项目](https://github.com/robomaster-oss/rmoss_ign) ：仿真功能软件栈，提供基于Ignition Gazebo的RoboMaster仿真相关功能。
+
+> 关于RoboMasterOSS项目详细介绍，见[Project](Get_Started/project)章节
 
 
 特点：
 
-- ROS2兼容（基于ROS2开发）：支持与ROS2其他功能包一起使用，如ROS2相关可视化工具。
-- 高扩展性：乐高式组件开发，支持DIY开发。
-- 文档支持：快速上手。
+* 遵循ROS2开发模式，支持与ROS2其他功能包一起使用。
+- 高扩展性，支持二次开发。
 
 >  关于RoboMasterOSS更多特点，见[Feature](Get_Started/feature)章节
 
 
-
 在RoboMaster比赛中，“机器视觉”，“自主导航”等相关内容涉及到高性能计算平台编程，RoboMasterOSS就是针对高性能计算平台编程的。
 
->  **高性能计算平台编程**：
+>  高性能计算平台编程：
 >
 > - 区别于嵌入式控制编程，高性能计算平台编程一般使用性能相对较好的单板计算机或mini PC作为开发平台， 例如manifold2， tx2， NUC， hikey970， 树莓派等。
 > - 因为“机器视觉”，“自主导航”等算法需要较高的计算性能支持，嵌入式处理器无法处理。一般来说，嵌入式控制编程比较底层，直接涉及到机器人执行机构和大部分传感器。
-> - 简单点说，嵌入式控制编程是底层软件开发，高性能计算平台编程是上层软件开发，在机器人开发中，两者各有分工，并通过[基本通信](Tutorials/beginner_rm_base.md) (rm_base模块)联系在一起。
+> - 简单点说，嵌入式控制编程是底层软件开发，高性能计算平台编程是上层软件开发，在机器人开发中，两者各有分工，并通过[基本通信](Tutorials/beginner_rmoss_base.md) (rmoss_base模块)联系在一起。
 >
 
 ### 适用场景
@@ -59,18 +59,12 @@ RoboMasterOSS 只有一个目的，**加速开发**。
 
 ### 设计参考
 
-* 基于ROS的设计方式
-* 参考了[RoboRTS][4]的设计方式
-* 参考了[Navigation2][5]的设计方式
+* 基于ROS2的设计方式：[ROS2开发指南](https://docs.ros.org/en/galactic/Contributing/Developer-Guide.html)
+* 参考了[RoboRTS](https://github.com/RoboMaster/RoboRTS)的设计方式
+* 参考了[Navigation2](https://github.com/ros-planning/navigation2)的设计方式
 
 > RoboRTS项目
 >
 > * RoboRTS项目是RoboMaster官方为RoboMaster人工智能挑战提供的开发样例。其中具有很多不错的设计思路，RMOSS中很多项目的设计思路就是参考RoboRTS，不过由于RoboRTS针对于全自动机器人，其功能针对于RoboMaster人工智能挑战赛，这是它的局限性。RMOSS目的是提供一个更为广泛的功能软件栈，这是不满足于RoboRTS提供的功能。
 
 <br>
-
-
-
-[2]: https://www.robomaster.com
-[4]: https://github.com/RoboMaster/RoboRTS
-[5]: https://github.com/ros-planning/navigation2

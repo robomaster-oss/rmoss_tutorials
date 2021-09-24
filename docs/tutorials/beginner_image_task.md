@@ -7,12 +7,12 @@
 * 自动瞄准：利用枪口上的摄像头识别对面装甲板，自动控制枪口瞄准敌方装甲板，提高命中率。
 * 能量机关：每年的能量机关任务都不一样，但不变的是都是一个非常有分量的视觉任务，从2018年的手写数字识别，到2019的大风车打靶，都离不开视觉的处理。
 
-在视觉任务开发中，相机的驱动，图像的采集是一些重复的工作，rmoss_core/rm_task封装了这部分的操作，使得开发者只需要关心图像处理部分，加速开发速度。
+在视觉任务开发中，相机的驱动，图像的采集是一些重复的工作，rmoss_core/rmoss_task封装了这部分的操作，使得开发者只需要关心图像处理部分，加速开发速度。
 
 本文涉及模块：
 
-- rm_cam
-- rm_task
+- rmoss_cam
+- rmoss_task
 
 ### 图像处理开发样例：实时显示相机采集到的图像
 
@@ -31,7 +31,7 @@ __step1:运行图像发布节点__
 运行：
 
 ```bash
-ros2 launch rm_cam sim_cam_image.launch.py 
+ros2 launch rmoss_cam sim_cam_image.launch.py 
 ```
 
 测试：
@@ -46,7 +46,7 @@ __step2:运行图像处理节点__
 运行：
 
 ```bash
-ros2 launch rm_task task_show_image.launch.py 
+ros2 launch rmoss_task task_show_image.launch.py 
 ```
 
 * 图像将会实时显示（类似rqt_image_view的功能）

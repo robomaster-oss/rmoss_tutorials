@@ -14,9 +14,6 @@ RoboMasterOSS具有多个项目，并都为开源项目，需要更多人的参�
 
 -  在pull  request前一定要先提issue，待我们联系后再pull  request，否则你的pr可能会被搁置。
 
--  以分支形式提交pr，分支命名fix-xxx，xxx为issue编号。
-
-
 ### 3.开源项目支持
 
 -  如果你基于RoboMasterOSS开发一个机器人demo开源项目，或者只是一个功能包，也请联系我们，并把你的开源地址发给我们，我们将提供链接，方便更多人学习与使用。
@@ -34,5 +31,5 @@ RoboMasterOSS具有多个项目，并都为开源项目，需要更多人的参�
 
 ### 6.加入我们
 
--  希望可以构建RoboMasterOSS开发社区，如果有人加入的话。。。
+- 希望可以构建RoboMasterOSS开发社区，如果有人加入的话。。。
 - 联系方式：zhenpeng.ge@qq.com
