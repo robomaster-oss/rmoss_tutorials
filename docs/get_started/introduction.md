@@ -12,7 +12,7 @@
 * [rmoss_contrib项目](https://github.com/robomaster-oss/rmoss_contrib) ：任务功能软件栈，提供任务级的功能包，如自瞄模块，能量机关模块等
 * [rmoss_ign项目](https://github.com/robomaster-oss/rmoss_ign) ：仿真功能软件栈，提供基于Ignition Gazebo的RoboMaster仿真相关功能。
 
-> 关于RoboMasterOSS项目详细介绍，见[Project](Get_Started/project)章节
+> 关于RoboMasterOSS项目详细介绍，见[Project](get_started/project)章节
 
 
 特点：
@@ -20,7 +20,7 @@
 * 遵循ROS2开发模式，支持与ROS2其他功能包一起使用。
 - 高扩展性，支持二次开发。
 
->  关于RoboMasterOSS更多特点，见[Feature](Get_Started/feature)章节
+>  关于RoboMasterOSS更多特点，见[Feature](get_started/feature)章节
 
 
 在RoboMaster比赛中，“机器视觉”，“自主导航”等相关内容涉及到高性能计算平台编程，RoboMasterOSS就是针对高性能计算平台编程的。
