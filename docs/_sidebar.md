@@ -10,6 +10,7 @@
 - **Developer Guides**
   - [RMOSS项目规范](developer_guides/rmoss_project_spec.md)
   - [RMOSS软件设计模式](developer_guides/rmoss_design_patten.md)
+  - [Pull Request指南](developer_guides/pr_guide.md)
   - [RM专用词语中英文对照](developer_guides/rm_terms.md)
 - **Resource**
   - [RoboMaster学习资源](resource/awesome.md)
