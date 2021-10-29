@@ -1,4 +1,4 @@
-# ROS2参考学习资料  
+# ROS2学习资源  
 
 ### 简介
 
@@ -26,14 +26,15 @@ Parameter机制是一种键对值存储方式，采用ros service方式存储与
 
 ### DDS机制
 
-DDS (Data Distribution Service)，即数据分发服务，是一种专门为实时系统设计的数据分发，订阅标准。ROS2通信基于DDS实现，因此ROS2继承了DDS的优点。
+DDS (Data Distribution Service)，即数据分发服务，是一种专门为实时系统设计的数据分发，订阅标准。ROS2通信基于DDS实现，因此ROS2也继承了DDS的优点。
 
 * 分布式系统：ROS2是一个分布式系统，这正得益于DDS的自动Discovery机制来实现的。（相比于ROS1，没有了master节点）
 * QoS通信配置：更灵活的通信机制，满足不同场景下的需求，例如，对于传感器消息，要求实时性高，允许部分丢包，而对于控制指令消息，要求可靠性高，允许消息延迟，这时候我们可以通过配置消息QoS满足我们的需求。
 
 参考资料
 
-* [2021年ROS暑期学校DDS讲座(B站)](https://www.bilibili.com/video/BV1sU4y1P7yn)：非常好的DDS中文介绍讲座
+* [2021年ROS暑期学校DDS讲座(B站)](https://www.bilibili.com/video/BV1sU4y1P7yn)：非常好的DDS中文介绍讲座。
+* [About Quality of Service settings](https://docs.ros.org/en/galactic/Concepts/About-Quality-of-Service-Settings.html): 官方QoS配置种类介绍。
 
 ### Composition机制
 
