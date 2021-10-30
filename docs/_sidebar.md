@@ -17,6 +17,7 @@
   - [RM相机选型指南](resource/camera_selection.md)
   - [ROS2学习资源](resource/ros2.md)
   - [ROS2 CMake指南](resource/ros2_cmake.md)
+  - [RMOSS 建模指南](resource/rmoss_ign.md)
   - [为什么要做RoboMasterOSS的一些想法](resource/rmoss_idea.md)
   - [FAQs](resource/faq.md)
 - [**Roadmap**](roadmap.md)
