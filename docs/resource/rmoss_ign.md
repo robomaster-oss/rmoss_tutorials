@@ -86,7 +86,7 @@ rmoss_ign_plugins为RoboMaster Ignition Simulator提供了一些公共基本控�
 <!--首先需要include相应模块定义 -->  
 <xmacro_include uri="model://rm21_speed_monitor_module/rm21_speed_monitor_module.def.xmacro" />
 <!--然后使用相应模块即可 -->
-<xmacro_block name="speed_monitor_17mm" suffix="_1" parent="base_link" rgb="1 0 0" pose="0.2 0 0 0 0 0"/> 
+<xmacro_block name="speed_monitor_17mm" suffix="_1" parent="base_link" pose="0.2 0 0 0 0 0"/> 
 ```
 
 * `speed_monitor_17mm`, `speed_monitor_42mm`：包含一个连杆`speed_monitor${suffix}`定义，模块原点为枪口背面中心，且原点位于枪管轴中心线上。
