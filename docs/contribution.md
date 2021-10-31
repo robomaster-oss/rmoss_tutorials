@@ -19,17 +19,8 @@ RoboMasterOSS具有多个项目，并都为开源项目，需要更多人的参�
 -  如果你基于RoboMasterOSS开发一个机器人demo开源项目，或者只是一个功能包，也请联系我们，并把你的开源地址发给我们，我们将提供链接，方便更多人学习与使用。
 
 
-### 4.文档issue
+### 4.文档支持
 
--  如果你发现我们的网页文档有误，也请给我们提issue。（robomaster-oss.github.io项目下提issue）
+-  如果你发现我们的网页文档有误，也请给我们提issue。（rmoss_tutorials项目下提issue）
 
-### 5.技术文章
-
--  我们的网页文档有Resource栏，如果具有相关开发经验，或者学习资源，欢迎给我们投稿，我们将在Resource栏下展示。
-
-- 目前只接受markdown文档
-
-### 6.加入我们
-
-- 希望可以构建RoboMasterOSS开发社区，如果有人加入的话。。。
-- 联系方式：zhenpeng.ge@qq.com
+-  我们的网页文档有Resource栏，如果具有相关开发经验，或者学习资源，欢迎给我们投稿，我们将在Resource栏下展示，目前只接受markdown文档

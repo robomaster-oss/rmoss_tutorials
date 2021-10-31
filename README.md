@@ -31,6 +31,7 @@ docsify serve docs
 
 * Get Started
 * Tutorials
+* Design
 * Developer Guides
 * Resource
 * Roadmap
