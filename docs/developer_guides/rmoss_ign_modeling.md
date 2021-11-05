@@ -1,9 +1,9 @@
 # RMOSS Ign建模指南
 
-[rmoss_ign](https://github.com/robomaster-oss/rmoss_ign)项目是基于Ignition Gazebo为RoboMaster提供仿真支持的功能栈，Ignition Gazebo机器人仿真主要包括两部分：3D建模和控制器
+[rmoss_ign](https://github.com/robomaster-oss/rmoss_ign)项目是基于Ignition Gazebo为RoboMaster提供仿真支持的功能栈，Ignition Gazebo机器人仿真主要包括两部分：仿真建模和仿真插件。
 
-* 3D模型构建：3D建模，并在sdf文件中定义link与joint等信息。
-* 控制器：也就是插件，实现机器人在仿真器中的感知，控制等功能。
+* 仿真建模：首先需要对机器人进行3D建模，在sdf文件定义了模型的link与joint等信息。
+* 仿真插件：作用于仿真模型，可与仿真器直接交互，给仿真模型施加力，获取仿真真模型状态等，实现机器人在仿真器中的感知，控制等功能。
 
 rmoss_ign_resources为RoboMaster Ignition Simulator提供了一些公共基本模型资源，包括以下3种类型：
 
@@ -28,7 +28,7 @@ rmoss_ign_plugins为RoboMaster Ignition Simulator提供了一些公共基本控�
 - rm21_video_transmitter_module（图传模块）：`video_transmitter` (TODO)
 - rm21_rfid_interaction_module（RFID模块）：暂不考虑，需要等待Ignition Gazebo的支持。
 
-遵循`控制器分离`的原则，这些模块都不包括控制器（插件）部分，仅仅为3D模型搭建，定义连杆，关节等信息。
+遵循`插件分离`的原则，这些模块都不包括插件部分，仅仅为3D模型搭建，定义连杆，关节等信息。
 
 > 对于`rm22_`系列裁判系统模块，使用方式基本与`rm21_`相同，对于相同的模块不再详述，对于不同的模块会直接单列出来。
 

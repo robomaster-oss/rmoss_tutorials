@@ -34,7 +34,18 @@ git checkout -b fix_abc
 # 提交代码
 git add . 
 git commit -s -m "fix some issues"
-git pull orgin fix_abc
+git push orgin fix_abc
+```
+
+如果提交的pull request需要修改，直接在分支`fix_abc`修改然后提交新的commit即可。
+
+```bash
+# 修改代码
+# ....
+# 提交代码
+git add . 
+git commit -s -m "fix some issues"
+git push orgin fix_abc
 ```
 
 如果在修改过程中，项目的main分支已经更新，并且发生冲突，无法直接合并，则需要rebase同步一下目标分支。
@@ -42,8 +53,9 @@ git pull orgin fix_abc
 ```bash
 # github (https://github.com/abcd/rmoss_core)页面，点击Fetch upstream
 git pull orgin main
+git checkout fix_abc
 git rebase -i main
-# 安装提示解决冲突
+# 按照提示解决冲突
 ```
 
 ### 本地测试
