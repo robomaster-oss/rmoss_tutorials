@@ -23,9 +23,9 @@ rmoss_ign_plugins为RoboMaster Ignition Simulator提供了一些公共基本控�
 
 * rm21_armor_module（装甲板模块）：`small_armor`, `large_armor`, `small_armor_with_support`, `large_armor_with_support`
 * rm21_light_indicator_module（灯条指示模块）：`light_indicator` 
-* rm21_speed_monitor_module（枪口测速模块）：`speed_monitor_17mm`, `speed_monitor_42mm`（TODO）
+* rm21_speed_monitor_module（枪口测速模块）：`speed_monitor_17mm`, `speed_monitor_42mm`
 
-- rm21_video_transmitter_module（图传模块）：`video_transmitter` (TODO)
+- rm21_video_transmitter_module（图传模块）：`video_transmitter`
 - rm21_rfid_interaction_module（RFID模块）：暂不考虑，需要等待Ignition Gazebo的支持。
 
 遵循`插件分离`的原则，这些模块都不包括插件部分，仅仅为3D模型搭建，定义连杆，关节等信息。
@@ -42,7 +42,7 @@ rmoss_ign_plugins为RoboMaster Ignition Simulator提供了一些公共基本控�
 <!--首先需要include相应模块定义 -->
 <xmacro_include uri="model://rm21_armor_module/rm21_armor_module.def.xmacro" />
 <!--然后使用相应模块即可 -->
-<!--sticker_type目前支持num1,num2,如果为空，则表示没有贴纸，贴纸种类后续将继续增加 -->
+<!--sticker_type表示贴纸类型, 如果为空, 则表示没有贴纸 -->
 <xmacro_block name="small_armor" suffix="_1" parent="base_link" sticker_type="" pose="0 -0.15 0.2 0 0 0"/>
 <xmacro_block name="large_armor" suffix="_2" parent="base_link" sticker_type="num1" pose="0 0.15 0.2 0 0 0"/>
 <xmacro_block name="small_armor_with_support" suffix="_3" parent="base_link" sticker_type="num2" pose="0.2 0 0 0 0 0"/>
@@ -51,11 +51,14 @@ rmoss_ign_plugins为RoboMaster Ignition Simulator提供了一些公共基本控�
 
 * `small_armor`, `large_armor`：包含一个连杆`armor${suffix}`定义，模块的原点在底面中心
 * `small_armor_with_support`, `large_armor_with_support`：包含两个连杆`armor${suffix}`和`armor_support_frame${suffix}`定义，模块的原点在支架背面的中心。
+* RM2021小装甲板支持的贴纸类型`sticker_type`：num1, num2, num3, num4, num5, base, outpost.
+* RM2021大装甲板支持的贴纸类型`sticker_type`：num1, num3, num4, num5, base, sentry.
+* RM2022新增装甲板贴纸(RMUA专有贴纸)：num1_0, num1_1, num1_2, num1_3, num2_0, num2_1, num2_2, num2_3.
 
 > Tip
 >
 > * 装甲板的判定击打的collision为`armor${suffix}/target_collision`
-> * 装甲板灯条visual路径为`armor{suffix}/light_bar_visual`
+> * 装甲板灯条visual为`armor{suffix}/light_bar_visual`
 
 #### rm21_light_indicator_module模块
 
@@ -78,7 +81,7 @@ rmoss_ign_plugins为RoboMaster Ignition Simulator提供了一些公共基本控�
 
 #### rm21_speed_monitor_module模块
 
-枪口测速模块，提供`speed_monitor_17mm` 和`speed_monitor_42mm` (TODO) 2个xmacro宏定义。
+枪口测速模块，提供`speed_monitor_17mm` 和`speed_monitor_42mm` 2个xmacro宏定义。
 
 ![](imgs/rm21_speed_monitor_module.png)
 
