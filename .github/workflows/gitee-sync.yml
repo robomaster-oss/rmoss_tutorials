@@ -1,0 +1,26 @@
+name: Sync to Gitee
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 21 * * *'
+
+jobs:
+  run:
+    name: Run
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get repository list exclude private and fork
+        id: repo
+        uses: yi-Xu-0100/repo-list-generator@v1.0.1
+      - name: Mirror Github to Gitee
+        uses: Yikun/hub-mirror-action@v1.2
+        with:
+          src: github/robomaster-oss
+          dst: gitee/robomaster-oss
+          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+          dst_token: ${{ secrets.GITEE_TOKEN }}
+          account_type: org
+          timeout: 600
+          debug: true
+          force_update: true
+          static_list: ${{ steps.repo.outputs.repoList }}
